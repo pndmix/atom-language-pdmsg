@@ -29,3 +29,6 @@
   'absolute':
     'prefix': 'a'
     'body': 'a($1)$2'
+  'int':
+    'prefix': 'I'
+    'body': 'I($1)$2'
