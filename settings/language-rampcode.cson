@@ -1,0 +1,5 @@
+'.source.rampcode':
+  'editor':
+    'softWrap': true
+    'commentStart': '/* '
+    'commentEnd': ' */'

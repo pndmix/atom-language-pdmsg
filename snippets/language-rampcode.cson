@@ -1,0 +1,31 @@
+'.source.rampcode':
+  'ramp':
+    'prefix': 'r'
+    'body': 'r: ${1:1.0};$2'
+  'channel':
+    'prefix': 'c'
+    'body': 'c${1:0}: $2;$3'
+  'filter':
+    'prefix': 'f'
+    'body': 'f${1:0}: $2: $3;$4'
+  'delay':
+    'prefix': 'd'
+    'body': 'd${1:0}: $2: $3;$4'
+  'hold':
+    'prefix': 'h'
+    'body': 'h${1:0}: $2: $3;$4'
+  'pan':
+    'prefix': 'p'
+    'body': 'p${1:0}: ${2:0.5};$3'
+  'load sample':
+    'prefix': 'l'
+    'body': 'l${1:0}: $2;$3'
+  'read sample':
+    'prefix': 'w'
+    'body': 'w${1:0}: $2: $3;$4'
+  'sin':
+    'prefix': 's'
+    'body': 's(${1:t})$2'
+  'absolute':
+    'prefix': 'a'
+    'body': 'a($1)$2'
