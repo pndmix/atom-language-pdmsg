@@ -1,8 +1,3 @@
 # Rampcode language package
 
-[Rampcode](https://github.com/gabochi/rampcode) syntax for Atom.
-
-Install
-~~~bash
-apm install language-rampcode
-~~~
+### Moved to [atom-rampcode](https://github.com/pndmix/atom-rampcode)
