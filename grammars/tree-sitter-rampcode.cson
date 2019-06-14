@@ -1,0 +1,105 @@
+name: 'Rampcode'
+scopeName: 'source.rampcode'
+type: 'tree-sitter'
+parser: 'tree-sitter-rampcode'
+
+fileTypes: ['ramp']
+
+folds: [
+  {
+    type: 'comment'
+  },
+  {
+    start: {type: '(', index: 0},
+    end: {type: ')', index: -1}
+  }
+]
+
+comments:
+  start: '--'
+
+scopes:
+  'program': 'source.rampcode'
+  
+  'comment': [
+    {
+      match: "^--",
+      scopes: 'comment.line'
+    },
+    'comment.block'
+  ]
+
+  '''
+    "integer",
+    "float"
+  ''': 'constant.numeric'
+
+  'signal': 'entity.name.function'
+
+  '''
+    "set",
+    "rec"
+  ''': 'storage.type'
+
+  'if': 'keyword.control'
+
+  '''
+    "*",
+    "/",
+    "%",
+    "+",
+    "-",
+    "<<",
+    ">>",
+    "&",
+    "^",
+    "|",
+    "~",
+    "<",
+    "<=",
+    "==",
+    "!=",
+    ">=",
+    ">",
+    "&&",
+    "||"
+  ''': 'keyword.operator'
+
+  '''
+    "int",
+    "rint",
+    "float",
+    "min",
+    "max",
+    "abs",
+    "floor",
+    "ceil",
+    "fmod",
+    "pow",
+    "sqrt",
+    "cbrt",
+    "exp",
+    "expm1",
+    "log",
+    "log1p",
+    "log10",
+    "fact",
+    "sin",
+    "cos",
+    "tan",
+    "asin",
+    "acos",
+    "atan",
+    "atan2",
+    "sinh",
+    "cosh",
+    "tanh",
+    "asinh",
+    "acosh",
+    "atanh"
+  ''': 'support.function'
+
+  '(': 'punctuation.definition.section.bracket.round.begin'
+  ')': 'punctuation.definition.section.bracket.round.end'
+  ',': 'punctuation.separator.delimiter'
+  ';': 'punctuation.terminator.statement'
