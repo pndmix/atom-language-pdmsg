@@ -29,19 +29,15 @@ scopes:
     'comment.block'
   ]
 
-  '''
-    "integer",
-    "float"
-  ''': 'constant.numeric'
+  'integer': 'constant.numeric'
+  'float': 'constant.numeric'
 
   'signal': 'entity.name.function'
 
-  '''
-    "set",
-    "rec"
-  ''': 'storage.type'
+  'function_name': 'support.function'
 
-  'if': 'keyword.control'
+  'set_statement': 'keyword.control'
+  'rec_statement': 'keyword.control'
 
   '''
     "*",
@@ -64,42 +60,3 @@ scopes:
     "&&",
     "||"
   ''': 'keyword.operator'
-
-  '''
-    "int",
-    "rint",
-    "float",
-    "min",
-    "max",
-    "abs",
-    "floor",
-    "ceil",
-    "fmod",
-    "pow",
-    "sqrt",
-    "cbrt",
-    "exp",
-    "expm1",
-    "log",
-    "log1p",
-    "log10",
-    "fact",
-    "sin",
-    "cos",
-    "tan",
-    "asin",
-    "acos",
-    "atan",
-    "atan2",
-    "sinh",
-    "cosh",
-    "tanh",
-    "asinh",
-    "acosh",
-    "atanh"
-  ''': 'support.function'
-
-  '(': 'punctuation.definition.section.bracket.round.begin'
-  ')': 'punctuation.definition.section.bracket.round.end'
-  ',': 'punctuation.separator.delimiter'
-  ';': 'punctuation.terminator.statement'
