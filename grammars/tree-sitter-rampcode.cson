@@ -38,6 +38,14 @@ scopes:
 
   'set_statement': 'keyword.control'
   'rec_statement': 'keyword.control'
+  'hz_statement': 'keyword.control'
+  'amp_statement': 'keyword.control'
+  'reset_statement': 'keyword.control'
+  'ramp_statement > "ramp"': 'keyword.control'
+  'left_channel_statement > "l"': 'keyword.control'
+  'right_channel_statement > "r"': 'keyword.control'
+
+  'reserved_word': 'keyword.operator'
 
   '''
     "*",
