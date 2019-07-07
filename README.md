@@ -2,8 +2,7 @@
 
 ![image](https://raw.githubusercontent.com/pndmix/atom-language-rampcode/master/assets/atom-ramp.PNG)
 
-Rampcode tree-sitter syntax for Atom.  
-[https://github.com/pndmix/tree-sitter-rampcode](https://github.com/pndmix/tree-sitter-rampcode)
+[Rampcode](https://github.com/gabochi/rampcode) syntax and snippets for Atom.
 
 ~~~bash
 # install package
@@ -11,5 +10,5 @@ $ apm install language-rampcode
 ~~~
 
 ### Notes
-- I have prebuilt the tree-sitter binaries. If it fails trying to build manually.
-- Manually building require `Python2`.
+- I have prebuilt [tree-sitter-rampcode](https://github.com/pndmix/tree-sitter-rampcode) binaries. If it fails trying to build manually.
+- You need `Python2` to build manually.
