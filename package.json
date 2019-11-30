@@ -13,6 +13,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-rampcode": "^0.3.0"
+    "tree-sitter-rampcode": "^0.5.2"
   }
 }
