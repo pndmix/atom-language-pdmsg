@@ -16,55 +16,56 @@ folds: [
 ]
 
 comments:
-  start: '--'
+  start: '//'
 
 scopes:
   'program': 'source.rampcode'
   
   'comment': [
     {
-      match: "^--",
+      match: "^//",
       scopes: 'comment.line'
     },
     'comment.block'
   ]
 
-  'integer': 'constant.numeric'
-  'float': 'constant.numeric'
+  'number': 'constant.numeric'
 
   'signal': 'entity.name.function'
 
-  'function_name': 'support.function'
+  'call_function > name': 'support.function'
 
-  'set_statement': 'keyword.control'
-  'rec_statement': 'keyword.control'
-  'hz_statement': 'keyword.control'
-  'amp_statement': 'keyword.control'
-  'reset_statement': 'keyword.control'
-  'ramp_statement > "ramp"': 'keyword.control'
-  'left_channel_statement > "l"': 'keyword.control'
-  'right_channel_statement > "r"': 'keyword.control'
+  'call_macro': 'entity.name.variable.macro'
+  'call_macro_function > name': 'entity.name.variable.macro'
 
-  'reserved_word': 'keyword.operator'
+  'cps_statement > "cps"': 'keyword.control'
+  'ramp1_statement > "ramp1"': 'keyword.control'
+  'ramp2_statement > "ramp2"': 'keyword.control'
 
-  '''
-    "*",
-    "/",
-    "%",
-    "+",
-    "-",
-    "<<",
-    ">>",
-    "&",
-    "^",
-    "|",
-    "~",
-    "<",
-    "<=",
-    "==",
-    "!=",
-    ">=",
-    ">",
-    "&&",
-    "||"
-  ''': 'keyword.operator'
+  'macro_statement > name': 'entity.name.variable.macro'
+  'macro_function_statement > name': 'entity.name.variable.macro'
+  'macro_function_statement > macro_arguments > name': 'constant.variable'
+
+  # '''
+  #   "=",
+  #   "*",
+  #   "/",
+  #   "%",
+  #   "+",
+  #   "-",
+  #   "<<",
+  #   ">>",
+  #   "&",
+  #   "^",
+  #   "|",
+  #   "~",
+  #   "!",
+  #   "<",
+  #   "<=",
+  #   "==",
+  #   "!=",
+  #   ">=",
+  #   ">",
+  #   "&&",
+  #   "||"
+  # ''': 'keyword.operator'
