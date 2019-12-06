@@ -1,3 +1,7 @@
+## 0.4.0 - 2019-
+* Upgrade tree-sitter-rampcode
+* Update for rampcode version 2
+
 ## 0.3.0 - 2019-07-07
 * Move snippets and base grammar from atom-rampcode
 * Update grammar and snippets for rampcode v1.0.0
