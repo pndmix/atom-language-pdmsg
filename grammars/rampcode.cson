@@ -1,7 +1,8 @@
 'name': 'Rampcode'
 'scopeName': 'source.rampcode'
 'fileTypes': [
-  'ramp'
+  'ramp',
+  'rampcode'
 ]
 'patterns': [
   {
@@ -9,18 +10,14 @@
     'name': 'entity.name.function.rampcode'
   }
   {
-    'match': '\\b([0-9]+\\.[0-9]+)|([0-9]+\\.)|(\\.[0-9])|\\b([0-9]+)\\b'
-    'name': 'constant.numeric.rampcode'
-  }
-  {
-    'match': '\\b(set|rec|hz|amp|reset|ramp|l|r)\\b'
+    'match': '\\b(cps|ramp1|ramp2)\\b'
     'name': 'keyword.control.rampcode'
   }
   {
-    'include': '#comments'
+    'include': '#number'
   }
   {
-    'include': '#operators'
+    'include': '#comments'
   }
   {
     'include': '#functions'
@@ -29,10 +26,26 @@
     'include': '#punctuation'
   }
   {
-    'include': '#reserved'
+    'include': '#macro'
   }
 ]
 'repository':
+  'number':
+    'patterns': [
+      {
+        'match': '\\b([0-9]+|[1-9][0-9]*\.[0-9]*|0?\.[0-9]+)[eE][\\-\\+]?[0-9]+\\b'
+        'name': 'constant.numeric.rampcode'
+      }
+      {
+        'match': '\\b([0-9]+\\.[0-9]+)|([0-9]+\\.)|(\\.[0-9])|\\b([0-9]+)\\b'
+        'name': 'constant.numeric.rampcode'
+      }
+    ]
+  'macro':
+    'patterns': [
+      'match': '\\b[a-zA-Z_][a-zA-Z_0-9]*\\b'
+      'name': 'entity.name.variable.rampcode'
+    ]
   'comments':
     'patterns': [
       {
@@ -47,37 +60,18 @@
         'name': 'comment.block.rampcode'
       }
       {
-        'begin': '--'
+        'begin': '//'
         'beginCaptures':
           '0':
             'name': 'punctuation.definition.comment.begin.rampcode'
         'end': '$'
-        'name': 'comment.line.double-dash.rampcode'
-      }
-    ]
-  'operators':
-    'patterns': [
-      {
-        'match': '(&&|\\|\\|)'
-        'name': 'keyword.operator.logical.rampcode'
-      }
-      {
-        'match': '(&|\\||\\^|~|>>|<<)'
-        'name': 'keyword.operator.bitwise.rampcode'
-      }
-      {
-        'match': '(==|!=|<=|>=|<|>)'
-        'name': 'keyword.operator.comparison.rampcode'
-      }
-      {
-        'match': '(%|\\*|/|-|\\+)'
-        'name': 'keyword.operator.math.rampcode'
+        'name': 'comment.line.double-slash.rampcode'
       }
     ]
   'functions':
     'patterns': [
       {
-        'match': '\\b(if|int|rint|float|min|max|abs|floor|ceil|fmod|pow|sqrt|cbrt|exp|expm1|log|log1p|log10|fact|sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|asinh|acosh|atanh)\\b'
+        'match': '\\b(if|int|rint|float|min|max|abs|pow|sqrt|exp|ln|log|log10|fact|cbrt|expm1|log1p|ldexp|sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|asinh|acosh|atanh|floor|ceil|fmod)\\b'
         'name': 'support.function.rampcode'
       }
     ]
@@ -101,16 +95,5 @@
       {
         'match': '\\)'
         'name': 'punctuation.unmatched.bracket.round.end.rampcode'
-      }
-      {
-        'match': ';'
-        'name': 'punctuation.terminator.statement.semicolon.rampcode'
-      }
-    ]
-  'reserved':
-    'patterns': [
-      {
-        'match': '(@|:)'
-        'name': 'keyword.operator.rampcode'
       }
     ]
