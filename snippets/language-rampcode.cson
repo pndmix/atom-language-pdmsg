@@ -3,30 +3,15 @@
   'input signal':
     'prefix': '$'
     'body': '$v1$1'
-  'set':
-    'prefix': 'set'
-    'body': 'set ${1:1.0};$2'
-  'record':
-    'prefix': 'rec'
-    'body': 'rec ${1:1};$2'
-  'hz':
-    'prefix': 'hz'
-    'body': 'hz @ ${1:0.125};$2'
-  'amp':
-    'prefix': 'amp'
-    'body': 'amp @ ${1:320000};$2'
-  'ramp':
-    'prefix': 'ramp'
-    'body': 'ramp @ $v1$1;$2'
-  'reset clock':
-    'prefix': 'reset'
-    'body': 'reset;$1'
-  'left channel':
-    'prefix': 'l'
-    'body': 'l @ $v1$1;$2'
-  'right channel':
-    'prefix': 'r'
-    'body': 'r @ $v1$1;$2'
+  'cps':
+    'prefix': 'cps'
+    'body': 'cps : ${1:0.5}$2'
+  'ramp1':
+    'prefix': 'ramp1'
+    'body': 'ramp1 : $v1$1'
+  'ramp2':
+    'prefix': 'ramp2'
+    'body': 'ramp2 : $v1$1'
 
   # base functions
   'if':
