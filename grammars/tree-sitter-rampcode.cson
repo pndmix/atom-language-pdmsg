@@ -3,7 +3,10 @@ scopeName: 'source.rampcode'
 type: 'tree-sitter'
 parser: 'tree-sitter-rampcode'
 
-fileTypes: ['ramp']
+fileTypes: [
+  'ramp',
+  'rampcode'
+]
 
 folds: [
   {
@@ -45,27 +48,3 @@ scopes:
   'macro_statement > name': 'entity.name.variable.macro'
   'macro_function_statement > name': 'entity.name.variable.macro'
   'macro_function_statement > macro_arguments > name': 'constant.variable'
-
-  # '''
-  #   "=",
-  #   "*",
-  #   "/",
-  #   "%",
-  #   "+",
-  #   "-",
-  #   "<<",
-  #   ">>",
-  #   "&",
-  #   "^",
-  #   "|",
-  #   "~",
-  #   "!",
-  #   "<",
-  #   "<=",
-  #   "==",
-  #   "!=",
-  #   ">=",
-  #   ">",
-  #   "&&",
-  #   "||"
-  # ''': 'keyword.operator'
