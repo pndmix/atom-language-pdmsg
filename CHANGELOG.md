@@ -1,6 +1,7 @@
-## 0.4.0 - 2019-
-* Upgrade tree-sitter-rampcode
-* Update for rampcode version 2
+## 0.4.0 - 2019-12-09
+* Upgrade tree-sitter-rampcode v0.6.1
+* Update grammar and snippets for rampcode v3
+* Change comment line syntax from double-dash to double-slash
 
 ## 0.3.0 - 2019-07-07
 * Move snippets and base grammar from atom-rampcode
