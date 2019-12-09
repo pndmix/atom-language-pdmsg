@@ -32,19 +32,19 @@ scopes:
     'comment.block'
   ]
 
+  'keyword_identifier': 'keyword.control'
+
+  # expression
   'number': 'constant.numeric'
 
   'signal': 'entity.name.function'
 
   'call_function > name': 'support.function'
 
-  'call_macro': 'entity.name.variable.macro'
-  'call_macro_function > name': 'entity.name.variable.macro'
+  # extended features ...
+  # 'call_macro': 'entity.name.variable.macro'
+  # 'call_macro_function > name': 'entity.name.variable.macro'
 
-  'cps_statement > "cps"': 'keyword.control'
-  'ramp1_statement > "ramp1"': 'keyword.control'
-  'ramp2_statement > "ramp2"': 'keyword.control'
-
-  'macro_statement > name': 'entity.name.variable.macro'
-  'macro_function_statement > name': 'entity.name.variable.macro'
-  'macro_function_statement > macro_arguments > name': 'constant.variable'
+  # 'macro_statement > name': 'entity.name.variable.macro'
+  # 'macro_function_statement > name': 'entity.name.variable.macro'
+  # 'macro_function_statement > macro_arguments > name': 'constant.variable'

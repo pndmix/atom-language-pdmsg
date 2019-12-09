@@ -10,7 +10,7 @@
     'name': 'entity.name.function.rampcode'
   }
   {
-    'match': '\\b(cps|ramp1|ramp2)\\b'
+    'match': '\\b(hz)\\b'
     'name': 'keyword.control.rampcode'
   }
   {
@@ -25,9 +25,9 @@
   {
     'include': '#punctuation'
   }
-  {
-    'include': '#macro'
-  }
+  # {
+  #   'include': '#macro'
+  # }
 ]
 'repository':
   'number':
