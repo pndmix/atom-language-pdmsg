@@ -3,15 +3,15 @@
   'input signal':
     'prefix': '$'
     'body': '$v1$1'
-  'cps':
-    'prefix': 'cps'
-    'body': 'cps : ${1:0.5}$2'
-  'ramp1':
-    'prefix': 'ramp1'
-    'body': 'ramp1 : $v1$1'
-  'ramp2':
-    'prefix': 'ramp2'
-    'body': 'ramp2 : $v1$1'
+  'hz':
+    'prefix': 'hz'
+    'body': 'hz @ ${1:1.0};$2'
+  # 'ramp1':
+  #   'prefix': 'ramp1'
+  #   'body': 'ramp1 : $v1$1'
+  # 'ramp2':
+  #   'prefix': 'ramp2'
+  #   'body': 'ramp2 : $v1$1'
 
   # base functions
   'if':
