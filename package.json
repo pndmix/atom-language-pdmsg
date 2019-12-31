@@ -1,5 +1,6 @@
 {
   "name": "language-rampcode",
+  "main": "./lib/main",
   "version": "0.4.0",
   "description": "language support for rampcode",
   "keywords": [
@@ -14,5 +15,12 @@
   },
   "dependencies": {
     "tree-sitter-rampcode": "^0.6.1"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
   }
 }
