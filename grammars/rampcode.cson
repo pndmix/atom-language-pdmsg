@@ -10,8 +10,12 @@
     'name': 'entity.name.function.rampcode'
   }
   {
-    'match': '\\b(hz)\\b'
+    'match': '\\b(hz|c|ramp1|ramp2)\\s*(?=(@|:))'
     'name': 'keyword.control.rampcode'
+  }
+  {
+    'match': '\\b(c)\\b'
+    'name': 'constant.variable.rampcode'
   }
   {
     'include': '#number'
@@ -25,9 +29,9 @@
   {
     'include': '#punctuation'
   }
-  # {
-  #   'include': '#macro'
-  # }
+  {
+    'include': '#macro'
+  }
 ]
 'repository':
   'number':
@@ -43,8 +47,10 @@
     ]
   'macro':
     'patterns': [
-      'match': '\\b[a-zA-Z_][a-zA-Z_0-9]*\\b'
-      'name': 'entity.name.variable.rampcode'
+      {
+        'match': '\\b[a-zA-Z_][a-zA-Z_0-9]*\\s*(?=\\()'
+        'name': 'entity.name.function.rampcode'
+      }
     ]
   'comments':
     'patterns': [
