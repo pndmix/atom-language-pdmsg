@@ -1,8 +1,14 @@
 [
   {
     "displayText": "$v1",
-    "snippet": "$v1",
+    "snippet": "$v1 ",
     "description": "input signal variable in ramp expression",
+    "type": "constant"
+  },
+  {
+    "displayText": "c",
+    "snippet": "c ",
+    "description": "constant number",
     "type": "constant"
   },
   {
