@@ -27,21 +27,64 @@ scopes:
   'comment': [
     {
       match: "^//",
-      scopes: 'comment.line'
+      scopes: 'comment.line.rampcode'
     },
-    'comment.block'
+    'comment.block.rampcode'
   ]
 
-  'keyword_identifier': 'keyword.control'
+  'keyword_identifier': [
+    {
+      match: '\\b(hz|c)\\b',
+      scopes: 'keyword.control.rampcode'
+    },
+    {
+      match: '\\b(def)\\b',
+      scopes: 'storage.type.rampcode'
+    }
+  ]
 
-  'number': 'constant.numeric'
+  'parenthesized > "("': 'punctuation.definition.expression.bracket.round.begin.rampcode'
+  'parenthesized > ")"': 'punctuation.definition.expression.bracket.round.end.rampcode'
+  'parameters > "("': 'punctuation.definition.parameter.bracket.round.begin.rampcode'
+  'parameters > ")"': 'punctuation.definition.parameter.bracket.round.end.rampcode'
+  'arguments > "("': 'punctuation.definition.argument.bracket.round.begin.rampcode'
+  'arguments > ")"': 'punctuation.definition.argument.bracket.round.end.rampcode'
 
-  'signal': 'entity.name.function'
+  '","': 'meta.delimiter.rampcode'
 
-  'call_function > name': 'support.function'
+  'macro_statement > name': 'entity.name.variable.rampcode'
+  'macro_function_statement > name': 'entity.name.function.rampcode'
+  'parameters > name': 'variable.parameter.function.rampcode'
 
-  'value': 'constant.variable'
+  'number': 'constant.numeric.rampcode'
+  'signal': 'constant.language.rampcode'
+  'value': 'constant.language.rampcode'
 
-  'call_macro_function > name': 'entity.name.function'
+  'call_function > name': 'entity.name.function.rampcode'
+  'call_macro_function > name': 'entity.name.function.macro.rampcode'
+  'call_macro > name': 'entity.name.variable.macro.rampcode'
 
-  'macro_function_statement > name': 'entity.name.function'
+  '''
+    "@",
+    ":",
+    "=",
+    "~",
+    "*",
+    "/",
+    "%",
+    "+",
+    "-",
+    "<<",
+    ">>",
+    "<",
+    "<=",
+    ">",
+    ">=",
+    "==",
+    "!=",
+    "&",
+    "^",
+    "|",
+    "&&",
+    "||",
+  ''': 'keyword.operator.rampcode'
