@@ -2,56 +2,38 @@
   {
     "displayText": "$v1",
     "snippet": "$v1 ",
-    "description": "input signal variable in ramp expression",
-    "type": "constant"
-  },
-  {
-    "displayText": "c",
-    "snippet": "c ",
-    "description": "constant number",
-    "type": "constant"
+    "type": "constant",
+    "rightLabel": "signal"
   },
   {
     "displayText": "hz",
     "snippet": "hz @ ${1:1.0};$2",
-    "description": "hz statement",
     "type": "snippet",
-    "rightLabel": "statement snippet"
+    "rightLabel": "new hz"
   },
   {
-    "displayText": "ramp",
+    "displayText": "c",
+    "snippet": "c @ ${1:8000};$2",
+    "type": "snippet",
+    "rightLabel": "new c"
+  },
+  {
+    "displayText": "exprs",
     "snippet": "${1:$v1} @ ${2:$v1};$3",
-    "description": "ramp expressions",
     "type": "snippet",
-    "rightLabel": "statement snippet"
+    "rightLabel": "new expressions"
   },
   {
-    "displayText": "ramp1",
-    "snippet": "ramp1 @ ${1:$v1};$2",
-    "description": "ramp1 statement",
+    "displayText": "defm",
+    "snippet": "def ${1:name} = $2;$3",
     "type": "snippet",
-    "rightLabel": "statement snippet"
+    "rightLabel": "new macro"
   },
   {
-    "displayText": "ramp2",
-    "snippet": "ramp2 @ ${1:$v1};$2",
-    "description": "ramp2 statement",
+    "displayText": "defmf",
+    "snippet": "def ${1:name}(${2:params}) = $3;$4",
     "type": "snippet",
-    "rightLabel": "statement snippet"
-  },
-  {
-    "displayText": "macro",
-    "snippet": "${1:name} = $2;$3",
-    "description": "define macro",
-    "type": "snippet",
-    "rightLabel": "statement snippet"
-  },
-  {
-    "displayText": "macroFunction",
-    "snippet": "${1:name}(${2:params}) = $3;$4",
-    "description": "define macro function",
-    "type": "snippet",
-    "rightLabel": "statement snippet"
+    "rightLabel": "new macro function"
   },
   {
     "displayText": "if",
