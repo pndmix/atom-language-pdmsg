@@ -1,0 +1,51 @@
+@import "syntax-variables";
+
+.syntax--source.syntax--rampcode {
+  .syntax--storage {
+    &.syntax--type {
+      color: @syntax-color-keyword;
+    }
+  }
+
+  .syntax--keyword {
+    &.syntax--control {
+      color: @syntax-color-keyword;
+    }
+    &.syntax--operator {
+      color: @syntax-text-color;
+    }
+  }
+
+  .syntax--constant {
+    &.syntax--language {
+      color: @syntax-color-snippet;
+    }
+
+    &.syntax--numeric {
+      color: @syntax-color-constant;
+    }
+  }
+
+  .syntax--entity {
+    &.syntax--name {
+      &.syntax--variable {
+        color: @syntax-text-color;
+        &.syntax--macro {
+          font-style: italic;
+        }
+      }
+
+      &.syntax--function {
+        color: @syntax-color-function;
+      }
+    }
+  }
+
+  .syntax--variable {
+    &.syntax--parameter {
+      &.syntax--function {
+        font-style: italic;
+      }
+    }
+  }
+}
