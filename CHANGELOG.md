@@ -1,3 +1,9 @@
+##
+* Add autocomplete
+* Add const and macro syntax
+* Add base syntax color
+* Upgrade tree-sitter-rampcode v0.7.0
+
 ## 0.4.0 - 2019-12-09
 * Upgrade tree-sitter-rampcode v0.6.1
 * Update grammar and snippets for rampcode v3
