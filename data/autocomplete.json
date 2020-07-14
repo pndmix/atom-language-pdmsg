@@ -24,18 +24,6 @@
     "rightLabel": "new expressions"
   },
   {
-    "displayText": "defm",
-    "snippet": "def ${1:name} = $2;$3",
-    "type": "snippet",
-    "rightLabel": "new macro"
-  },
-  {
-    "displayText": "defmf",
-    "snippet": "def ${1:name}(${2:params}) = $3;$4",
-    "type": "snippet",
-    "rightLabel": "new macro function"
-  },
-  {
     "displayText": "if",
     "snippet": "if($1, $2, $3)$4",
     "description": "conditional",

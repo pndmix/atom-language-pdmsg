@@ -10,7 +10,8 @@ fileTypes: [
 
 folds: [
   {
-    type: 'comment'
+    start: {type: '{', index: 0},
+    end: {type: '}', index: -1}
   },
   {
     start: {type: '(', index: 0},
@@ -23,50 +24,30 @@ comments:
 
 scopes:
   'program': 'source.rampcode'
-  
-  'comment': [
-    {
-      match: "^//",
-      scopes: 'comment.line.rampcode'
-    },
-    'comment.block.rampcode'
-  ]
 
-  'keyword_identifier': [
-    {
-      match: '\\b(hz|c)\\b',
-      scopes: 'keyword.control.rampcode'
-    },
-    {
-      match: '\\b(def)\\b',
-      scopes: 'storage.type.rampcode'
-    }
-  ]
+  'comment': 'comment.line.rampcode'
 
+  '''
+    port,
+    host,
+    protocol,
+    keyword_identifier,
+  ''': 'keyword.control.statement.rampcode'
+
+  'special_parameter': 'support.other.rampcode'
+
+  'statement_block > "{"': 'punctuation.definition.block.bracket.curly.begin.rampcode'
+  'statement_block > "}"': 'punctuation.definition.block.bracket.curly.end.rampcode'
   'parenthesized > "("': 'punctuation.definition.expression.bracket.round.begin.rampcode'
   'parenthesized > ")"': 'punctuation.definition.expression.bracket.round.end.rampcode'
-  'parameters > "("': 'punctuation.definition.parameter.bracket.round.begin.rampcode'
-  'parameters > ")"': 'punctuation.definition.parameter.bracket.round.end.rampcode'
   'arguments > "("': 'punctuation.definition.argument.bracket.round.begin.rampcode'
   'arguments > ")"': 'punctuation.definition.argument.bracket.round.end.rampcode'
 
-  '","': 'meta.delimiter.rampcode'
-
-  'macro_statement > name': 'entity.name.variable.rampcode'
-  'macro_function_statement > name': 'entity.name.function.rampcode'
-  'parameters > name': 'variable.parameter.function.rampcode'
-
   'number': 'constant.numeric.rampcode'
-  'signal': 'constant.language.rampcode'
-  'value': 'constant.language.rampcode'
-
-  'call_function > name': 'entity.name.function.rampcode'
-  'call_macro_function > name': 'entity.name.function.macro.rampcode'
-  'call_macro > name': 'entity.name.variable.macro.rampcode'
+  'variable': 'constant.language.rampcode'
+  'function > name': 'entity.name.function.rampcode'
 
   '''
-    "@",
-    ":",
     "=",
     "~",
     "*",
