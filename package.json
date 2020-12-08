@@ -1,12 +1,12 @@
 {
-  "name": "language-rampcode",
+  "name": "language-pdmsg",
   "main": "./lib/index",
   "version": "0.4.0",
-  "description": "language support for rampcode",
+  "description": "language support for pdmsg",
   "keywords": [
     "language",
     "grammar",
-    "rampcode"
+    "pdmsg"
   ],
   "repository": "https://github.com/pndmix/atom-language-rampcode",
   "license": "MIT",
