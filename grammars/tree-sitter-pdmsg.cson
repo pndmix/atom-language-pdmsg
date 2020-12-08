@@ -1,18 +1,13 @@
-name: 'Rampcode'
-scopeName: 'source.rampcode'
+name: 'Pdmsg'
+scopeName: 'source.pdmsg'
 type: 'tree-sitter'
-parser: 'tree-sitter-rampcode'
+parser: 'tree-sitter-pdmsg'
 
 fileTypes: [
-  'ramp',
-  'rampcode'
+  'pdmsg'
 ]
 
 folds: [
-  {
-    start: {type: '{', index: 0},
-    end: {type: '}', index: -1}
-  },
   {
     start: {type: '(', index: 0},
     end: {type: ')', index: -1}
@@ -23,29 +18,36 @@ comments:
   start: '//'
 
 scopes:
-  'program': 'source.rampcode'
+  'program': 'source.pdmsg'
 
-  'comment': 'comment.line.rampcode'
+  'comment': 'comment.line.pdmsg'
 
-  '''
-    port,
-    host,
-    protocol,
-    keyword_identifier,
-  ''': 'keyword.control.statement.rampcode'
+  'keyword_identifier': 'keyword.control.statement.pdmsg'
 
-  'special_parameter': 'support.other.rampcode'
+  'parenthesized > "("': 'punctuation.definition.expression.bracket.round.begin.pdmsg'
+  'parenthesized > ")"': 'punctuation.definition.expression.bracket.round.end.pdmsg'
 
-  'statement_block > "{"': 'punctuation.definition.block.bracket.curly.begin.rampcode'
-  'statement_block > "}"': 'punctuation.definition.block.bracket.curly.end.rampcode'
-  'parenthesized > "("': 'punctuation.definition.expression.bracket.round.begin.rampcode'
-  'parenthesized > ")"': 'punctuation.definition.expression.bracket.round.end.rampcode'
-  'arguments > "("': 'punctuation.definition.argument.bracket.round.begin.rampcode'
-  'arguments > ")"': 'punctuation.definition.argument.bracket.round.end.rampcode'
+  'arguments > "("': 'punctuation.definition.argument.bracket.round.begin.pdmsg'
+  'arguments > ")"': 'punctuation.definition.argument.bracket.round.end.pdmsg'
 
-  'number': 'constant.numeric.rampcode'
-  'variable': 'constant.language.rampcode'
-  'function > name': 'entity.name.function.rampcode'
+  'connect_arguments > "("': 'punctuation.definition.connect.argument.bracket.round.begin.pdmsg'
+  'connect_arguments > ")"': 'punctuation.definition.connect.argument.bracket.round.end.pdmsg'
+  'connect_arguments > port': 'constant.numeric.pdmsg'
+  'connect_arguments > host': 'variable.parameter.pdmsg'
+
+  'message > "("': 'punctuation.definition.message.bracket.round.begin.pdmsg'
+  'message > ")"': 'punctuation.definition.message.bracket.round.end.pdmsg'
+
+  'subpatch_variable': 'variable.other.pdmsg'
+  'dollar_variable': 'variable.language.pdmsg'
+
+  'index_pattern > "["': 'punctuation.definition.array.bracket.square.begin.pdmsg'
+  'index_pattern > "]"': 'punctuation.definition.array.bracket.square.end.pdmsg'
+  'index': 'constant.numeric.pdmsg'
+
+  'string': 'string.quoted.pdmsg'
+  'function > name': 'entity.name.function.pdmsg'
+  'number': 'constant.numeric.pdmsg'
 
   '''
     "=",
@@ -68,4 +70,4 @@ scopes:
     "|",
     "&&",
     "||",
-  ''': 'keyword.operator.rampcode'
+  ''': 'keyword.operator.pdmsg'
