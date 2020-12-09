@@ -1,14 +1,10 @@
-# language-rampcode
+# language-pdmsg
+[![apm version](https://img.shields.io/apm/v/language-pdmsg.svg)](https://atom.io/packages/language-pdmsg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-![image](https://raw.githubusercontent.com/pndmix/atom-language-rampcode/master/assets/atom-ramp.PNG)
+Pdmsg syntax and snippets in Atom using the [tree-sitter-pdmsg](https://github.com/pndmix/tree-sitter-pdmsg).
 
-[Rampcode](https://github.com/gabochi/rampcode) syntax and snippets for Atom.
-
+## Install
 ~~~bash
-# install package
-$ apm install language-rampcode
+$ apm install language-pdmsg
 ~~~
-
-### Notes
-- I have prebuilt [tree-sitter-rampcode](https://github.com/pndmix/tree-sitter-rampcode) binaries. If it fails trying to build manually.
-- You need `Python2` to build manually.
