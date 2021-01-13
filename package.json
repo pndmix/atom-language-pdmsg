@@ -14,7 +14,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-pdmsg": "^0.1.2"
+    "tree-sitter-pdmsg": "^0.2.0"
   },
   "devDependencies": {
     "@types/atom": "^1.40.5",
