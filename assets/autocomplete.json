@@ -1,12 +1,5 @@
 [
   {
-    "displayText": "connect",
-    "snippet": "C(${1:<port>}, ${2:localhost}) << ( $3 )",
-    "description": "send messages to pd",
-    "type": "snippet",
-    "rightLabel": "new message"
-  },
-  {
     "displayText": "$i",
     "snippet": "$i${1:1}",
     "description": "integer",
