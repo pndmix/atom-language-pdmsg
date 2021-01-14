@@ -71,3 +71,5 @@ scopes:
     "&&",
     "||",
   ''': 'keyword.operator.pdmsg'
+
+  'semicolon': 'punctuation.terminator.statement.semicolon.pdmsg'
